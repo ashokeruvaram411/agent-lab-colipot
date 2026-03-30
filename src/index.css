@@ -6,6 +6,28 @@
   --color-marked: #dcfce7;
   --color-marked-border: #22c55e;
   --color-bingo: #fbbf24;
+
+  /* Gradient glass tokens */
+  --color-grad-from: #0f0c29;
+  --color-grad-via: #302b63;
+  --color-grad-to: #24243e;
+  --color-glass-bg: color-mix(in srgb, white 12%, transparent);
+  --color-glass-border: color-mix(in srgb, white 25%, transparent);
+  --color-glass-marked: color-mix(in srgb, #22c55e 30%, transparent);
+  --color-glass-marked-border: color-mix(in srgb, #22c55e 55%, transparent);
+  --color-glass-bingo: color-mix(in srgb, #f59e0b 30%, transparent);
+  --color-glass-bingo-border: color-mix(in srgb, #f59e0b 55%, transparent);
+}
+
+@utility glass {
+  background-color: var(--color-glass-bg);
+  border: 1px solid var(--color-glass-border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+@utility gradient-bg {
+  background: linear-gradient(135deg, var(--color-grad-from) 0%, var(--color-grad-via) 50%, var(--color-grad-to) 100%);
 }
 
 html,
